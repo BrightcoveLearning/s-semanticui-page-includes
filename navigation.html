@@ -1,6 +1,70 @@
-<div class="container">
+<div style="position: absolute; margin-top: 20px; margin-left: 20px; width: 100%;">
+  <div class="ui pointing vertical menu">
+    <div class="active item">
+      <div class="ui accordion">
+        <div class="active title">
+          <i class="dropdown icon"></i>
+         Other Brightcove Docs
+        </div>
+       
+        <div class="active content">
+          {% for site in site.data.sites %}
+						{% if site.name != site.product %}
+          <div class="item">
+            {{ site.name }}
+          </div>
+          {% endif %}
+					{% endfor %}
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="ui accordion">
+        <div class="active title">
+          <i class="dropdown icon"></i>
+         Getting Started
+        </div>
+       
+        <div class="active content">
+          <div class="item">Choice 1</div>
+          <div class="item">Choice 2</div>
+          <div class="item">Choice 3</div>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="ui accordion">
+        <div class="active title">
+          <i class="dropdown icon"></i>
+         Managing Videos
+        </div>
+       
+        <div class="active content">
+          <div class="item">Choice 1</div>
+          <div class="item">Choice 2</div>
+          <div class="item">Choice 3</div>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="ui accordion">
+        <div class="active title" style="line-height: normal;">
+          <i class="dropdown icon"></i>
+         Managing Cloud Playout Channels
+        </div>
+       
+        <div class="active content">
+          <div class="item">Choice 1</div>
+          <div class="item">Choice 2</div>
+          <div class="item">Choice 3</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="container">
     <div class="row">
-      <div class="col-sm-3 left-side-bar">
 				<select id="site_select" class="bcls-select" style="margin-left: 1rem;">
 					<option value="">Other Brightcove Docs</option>
 					{% for site in site.data.sites %}
@@ -46,5 +110,5 @@
           {% endfor %}
       </nav>
     </div>
-    <div class="col-lg-7" style="background-color: white;color: #333333;margin-top: -1em;margin-bottom: -1em;padding-bottom:1em;">
+    <div class="col-lg-7" style="background-color: white;color: #333333;margin-top: -1em;margin-bottom: -1em;padding-bottom:1em;"> -->
   <!-- bootstrap layout -->
