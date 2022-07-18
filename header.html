@@ -40,13 +40,24 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 /* ]]> */
 </script>
 
-
-
-&nbsp;<span class="secondary-nav"><a href="https://support.brightcove.com/product-updates.html">Product Updates</a> <span style="vertical-align: middle;margin-left:1em;margin-right:1em;">|</span> <a href="https://supportportal.brightcove.com">Contact Support</a> <span style="vertical-align: middle;margin-left:1em;margin-right:1em;">|</span> <a href="https://status.brightcove.com/">System Status</a></span>
-    <br>
+<div class="ui large breadcrumb">
+  {% if page.parent %}
+  <a  href="/" class="section">Home</a>
+  {% endif %}
+  {% if page.grandparent_name %}
+  <i class="right chevron icon divider"></i>
+  <a href="{{ page.grandparent_path }}" class="section">{{ page.grandparent_name }}</a>
+  {% endif %}
+  {% if page.parent and page.parent != "Home" %}
+  <i class="right chevron icon divider"></i>
+  <a href="{{ page.dir }}" class="section">{{ page.parent }}</a>
+  {% endif %}
+  <i class="right chevron icon divider"></i>
+  <div class="active section">{{ page.title }}</div>
+</div>
     
  
-  <nav aria-label="breadcrumb">
+  <!-- <nav aria-label="breadcrumb">
     <ol class="breadcrumb arr-right">
       {% if page.parent %}
       <li class="breadcrumb-item first-item"><a href="/">Home</a></li>
@@ -59,5 +70,5 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       {% endif %}
       <li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
     </ol>
-  </nav>
+  </nav> -->
 </header>
